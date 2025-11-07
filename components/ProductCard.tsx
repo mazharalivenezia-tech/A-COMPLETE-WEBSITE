@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Product } from '../types';
@@ -22,15 +21,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onQuickViewClick }) 
         <img
           src={product.images[0]}
           alt={product.name}
-          className="h-full w-full object-cover object-center group-hover:opacity-75 transition-all duration-500 ease-in-out group-hover:scale-110"
+          className="h-full w-full object-cover object-center group-hover:scale-110 transition-transform duration-500 ease-in-out"
         />
-        {product.images.length > 1 && (
-             <img
-                src={product.images[1]}
-                alt={`${product.name} alternate view`}
-                className="h-full w-full object-cover object-center absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out group-hover:scale-110"
-            />
-        )}
         <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
             <button
                 onClick={(e) => {
